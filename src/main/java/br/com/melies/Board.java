@@ -180,7 +180,7 @@ public class Board extends JPanel {
     }
     
     private void buildWorld(Graphics g) {
-        g.setColor(new Color(162,42,230));
+        g.setColor(new Color(7,217,163));
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
         List<Actor> world = new ArrayList<>();
