@@ -22,8 +22,8 @@ Alberto está passando mal do coração e precisa guardar alguns remédio para s
 Puzzle - Estilo empurra caixa.
 
 ### Telas do jogo
-Tela de Start
+Tela de Start  
 ![img](src/main/resources/imgs_git/tela_start.png)
 
-Tela do Game
+Tela do Game  
 ![img](src/main/resources/imgs_git/tela_game.png)
