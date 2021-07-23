@@ -3,9 +3,13 @@ Aluno: Guilherme Lucas dos Santos Costa
 E-mail: tfguilherme.07@gmail.com  
 [Linkedin](https://www.linkedin.com/in/guilherme-scosta/)
 
-## Bibliotecas usadas
-* Java 11
-* Java Swing
+## Requisitos
+* Java 1.8
+* Maven 3.8.1
+* IDE com suporte a Java (Para de desenvolvedores)
+
+## Run Project
+mvn exec:java
 
 ## Tema
 The Sound of a Heartbeat
