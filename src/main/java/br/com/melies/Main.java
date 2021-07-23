@@ -23,7 +23,7 @@ public class Main extends JFrame{
         Board board = new Board();
         add(board);
 
-        setTitle("Teste");
+        setTitle("Game");
         
         setSize(board.getBoardWidth() + OFFSET,
                 board.getBoardHeight() + 2 * OFFSET);

@@ -99,7 +99,7 @@ public class Board extends JPanel {
         String message = "Game Final de Fundamentos de Programação\n"
                         + "Ajude o Alberto a conseguir seus remédio para o coração que estão espalhados pelo cenário.\n"
                         + "Deixe cada remédio em um baú para ajudá-lo.\n"
-                        + "Utilize as setas do teclado para andar (↑↓←→) e a tecl R para restart.\n";
+                        + "Utilize as setas do teclado para andar (↑↓←→) e a tecla R para restart.\n";
         JOptionPane.showMessageDialog(this, message, "Game Jam - 2021", 2);
         return true;
     }
@@ -180,7 +180,7 @@ public class Board extends JPanel {
     }
     
     private void buildWorld(Graphics g) {
-        g.setColor(Color.LIGHT_GRAY);
+        g.setColor(new Color(162,42,230));
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
         List<Actor> world = new ArrayList<>();
@@ -199,20 +199,16 @@ public class Board extends JPanel {
             else
                 g.drawImage(actor.getImage().getImage(), actor.x(), actor.y(), this);
 
-            if (isCompleted) {                
-                g.setColor(new Color(0, 0, 0));
-                g.drawString("Completed", 25, 20);
-            }
         }
     }
 
     private class TAdapter extends KeyAdapter {
         @Override
         public void keyPressed(KeyEvent e) {
-            if (isCompleted)
-                return;
-
             int key = e.getKeyCode();
+
+            if (isCompleted && key != KeyEvent.VK_R)
+                return;
 
             switch (key) {                
                 case KeyEvent.VK_LEFT:                    
@@ -266,6 +262,7 @@ public class Board extends JPanel {
                 default:
                     break;
             }
+
             repaint();
         }
 
@@ -433,6 +430,7 @@ public class Board extends JPanel {
 
         if (finishedBags == nOfBags) {            
             isCompleted = true;
+            JOptionPane.showMessageDialog(this, "Você salvou o Alberto", "Finish", 2);
             repaint();
         }
     }
